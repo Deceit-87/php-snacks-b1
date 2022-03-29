@@ -19,19 +19,43 @@
 
         [
 
-            'casa' => 'Basket Milano', 
-            'opsite' => 'Basket Roma',
-            'punti_casa' => 45,
-            'punti_opsite' => 21,
+            'casa' => 'Basket Milano',
+            'ospite' => 'Basket Roma',
+            
+            'punti_casa' => 45, 
+            'punti_ospite' => 21,
+        ],
+        [
+
+            'casa' => 'Basket Torino',
+            'ospite' => 'Basket Palermo',
+            'punti_casa' => 35,
+            'punti_ospite' => 71,
+            
+        ],
+        [
+
+            'casa' => 'Basket Venezia',
+            'ospite' => 'Basket Genova',
+            'punti_casa' => 49,
+            'punti_ospite' => 11,
+            
         ],
     ]
 
     ?>
-    <div>
-        <h1> 
-            <?php echo $partite[0]['casa']; ?> - <?php echo $partite[0]['ospite']; ?>
-        </h1>
-    </div>
+
+    <?php
+    for ($i = 0; $i < count($partite); $i++) {
+    ?>
+        <div>
+            <h1>
+                <?php echo $partite[$i]['casa']; ?> - <?php echo $partite[$i]['ospite']; ?> | <?php echo $partite[$i]['punti_casa']; ?> - <?php  echo $partite[$i]['punti_ospite'] ?>
+            </h1>
+        </div>
+    <?php
+    }
+    ?>
 
 
 </body>
