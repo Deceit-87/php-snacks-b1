@@ -50,10 +50,26 @@ $posts = [
 ];
 
 
-for ($i=0; $i < count($posts[$i]) ; $i++) { 
-   echo 'sto cazzo';
-}
-?>
+    foreach ($posts as $key => $value){
+      ?>
+      <div>
+        <?php echo $key ?>
+          <?php
+          for ( $i = 0; $i<count($posts[$key]); $i++){
+            ?>
+            <div>
+              <?php echo $posts[$key][$i]['title'] ?>
+              <?php echo $posts[$key][$i]['author'] ?>
+              <?php echo $posts[$key][$i]['text'] ?>
+            </div>
+            <?php
+          }
+          ?>
+          <hr>
+      </div>
+      <?php
+    }
+  ?>  
 
 
 
